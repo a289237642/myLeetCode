@@ -37,3 +37,13 @@ class Solution(object):
                 count_0 += 1  # 零的个数+1
             else:  # 遇到的数不是零
                 i += 1  # 查看下一个数
+
+
+class Solution(objec):
+    def moveZeroes(self, nums: List[int]) -> None:
+        i = 0
+        for j in range(len(nums)):
+            if nums[j] != 0:
+                nums[i], nums[j] = num[j], num[i]
+            i += 1
+        return nums
