@@ -1,0 +1,25 @@
+{
+  "folders": [
+    {
+      "path": "../../algorithm010"
+    },
+    {
+      "path": ".."
+    },
+    {
+      "path": "../../scala"
+    },
+    {
+      "path": "../../industry"
+    },
+    {
+      "path": "../../semiconductor-web"
+    },
+    {
+      "path": "../../lg_html"
+    }
+  ],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "lg_html"
+  }
+}
