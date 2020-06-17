@@ -33,7 +33,6 @@ class Solution:
 
 
 
-https://leetcode-cn.com/problems/plus-one/
 
 https://leetcode-cn.com/problems/sliding-window-maximum/
 https://leetcode-cn.com/problems/largest-rectangle-in-histogram/
@@ -48,4 +47,29 @@ https://leetcode-cn.com/problems/trapping-rain-water/
 https://leetcode-cn.com/problems/valid-anagram/description/
 https://leetcode-cn.com/problems/binary-tree-inorder-traversal/
 https://leetcode-cn.com/problems/zui-xiao-de-kge-shu-lcof/
+
+https://leetcode-cn.com/problems/valid-anagram/description/
+https://leetcode-cn.com/problems/group-anagrams/
+https://leetcode-cn.com/problems/two-sum/description/
+
+
+
+
+
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        if len(s) != len(t): return False
+        se = set(s)
+        if se == set(t):
+            for i in se:
+                # 直接比较字符元素个数比较字符的个数
+                if s.count(i) != t.count(i):return False
+            return True
+        else:
+            return False
+
+
+root = [1,null,3,2,4,null,5,6]
+
+
 
