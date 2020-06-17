@@ -33,26 +33,39 @@
 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 """
 
-class Solution(object):
-    def isValid(self, s):
-        """
-        :type s: str
-        :rtype: bool
-        """
+# class Solution(object):
+#     def isValid(self, s):
+#         """
+#         :type s: str
+#         :rtype: bool
+#         """
 
-        stack = []
+#         stack = []
 
-        mapping = {")": "(", "}": "{", "]": "["}
+#         mapping = {")": "(", "}": "{", "]": "["}
 
-        for char in s:
+#         for char in s:
 
-            if char in mapping:
+#             if char in mapping:
 
-                top_element = stack.pop() if stack else '#'
+#                 top_element = stack.pop() if stack else '#'
 
-                if mapping[char] != top_element:
-                    return False
+#                 if mapping[char] != top_element:
+#                     return False
+#             else:
+#                 stack.append(char)
+
+#         return not stack
+
+
+class Solution:
+    def isValid(self, s: str) -> bool:
+
+        left, right, stack= "({[", ")}]", []
+        for item in s:
+            if item in left:
+                stack.append(item)
             else:
-                stack.append(char)
-
+                if not stack or left.find(stack.pop()) != right.find(item):
+                    return False
         return not stack
